@@ -1,0 +1,12 @@
+CREDENTIALS:
+  User 1:
+    username: user1@test.com
+    password: user1@test.com
+  User 2:
+    username: user2@test.com
+    password: user2@test.com
+
+TODOLY:
+  api_url_base: https://todo.ly/api
+  api_token_endpoint: /authentication/token.json
+  format_type: .json
