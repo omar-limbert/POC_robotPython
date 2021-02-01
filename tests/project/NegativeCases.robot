@@ -14,6 +14,7 @@ ${put_with_invalid_fields}=    {"Reference":"@post_project", "Body":{"ContentINV
 *** Test Cases ***
 
 Scenario: Negative Cases - POST Project without required fields as User 1
+    [Tags]  Negative    Api
     Given I get token as:  User 1
     When I create Project with following information  ${project_without_required_field}
     Then I expect HTTP status code:  200
@@ -21,6 +22,7 @@ Scenario: Negative Cases - POST Project without required fields as User 1
 
 
 Scenario: Negative Cases - POST Project with empty body as User 1
+    [Tags]  Negative    Api
     Given I get token as:  User 1
     When I create Project with following information  ${project_with_empty_body}
     Then I expect HTTP status code:  200
@@ -28,6 +30,7 @@ Scenario: Negative Cases - POST Project with empty body as User 1
 
 
 Scenario: Negative Cases - PUT Project with invalid fields as User 1
+    [Tags]  Negative    Api
     Given I get token as:  User 1
       # Precondittion: create project
       And I create Project with following information  ${post_project_body}
